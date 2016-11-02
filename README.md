@@ -1,6 +1,6 @@
 # node-acl-testing
 
-Uses the memory backend of the `acl` module.
+Uses the memory backend of the [`acl`](https://www.npmjs.com/package/acl) module.
 
 ```
 npm install
