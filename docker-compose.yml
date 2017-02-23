@@ -1,0 +1,14 @@
+version: '2'
+services:
+  fruit:
+    image: 'fruitsvc:latest'
+    ports:
+      - "3001:3000"
+    volumes:
+      - /Users/esmith/Dev/test-acl/fruit-svc:/app
+  auth:
+    image: 'authenticationsvc:latest'
+    ports:
+      - "3000:3000"
+    volumes:
+      - /Users/esmith/Dev/test-acl/authentication-svc:/app

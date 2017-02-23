@@ -4,7 +4,7 @@ var authenticate = require('./middleware').authenticate;
 var acl = require('./acl');
 
 var userId = function(req, res) {
-  return req.username;
+  return req.role;
 };
 
 router.route('/')
@@ -17,7 +17,7 @@ router.route('/')
 router.use(authenticate);
 
 router.use(function(req, res, next) {
-  console.log('Serving authenticated user', req.username);
+  console.log('Serving authenticated user with role', req.role);
   next();
 });
 

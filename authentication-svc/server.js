@@ -4,7 +4,7 @@ var http = require('http');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var app = express();
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(morgan('combined'));

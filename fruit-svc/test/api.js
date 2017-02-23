@@ -12,8 +12,8 @@ describe('api', function() {
   before(function(done) {
     var options = { expiresIn: '1m' };
     var secret = 'secret';
-    tokenGuest  = jwt.sign({username: 'guest@home.com'}, secret, options);
-    tokenMember = jwt.sign({username: 'member@home.com'}, secret, options);
+    tokenGuest  = jwt.sign({role: 'guest'}, secret, options);
+    tokenMember = jwt.sign({role: 'member'}, secret, options);
     // console.log('guest', tokenGuest);
     // console.log('member', tokenMember);
     done();

@@ -12,6 +12,7 @@ module.exports = {
     } else {
       jwt.verify(req.headers['authorization'], 'secret', function(err, decoded) {
         if (err) {
+          console.log('error:', err.message);
           next(err);
         } else {
           req.username = decoded.username;
